@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentación de Proyectos Electrónicos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#f4f1ea;
+--card:#faf8f4;
+--text:#111;
+--border:#d8d1c7;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:Inter,sans-serif;
+line-height:1.6;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:80px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.2fr 1fr;
+gap:80px;
+width:100%;
+max-width:1400px;
+margin:auto;
+}
+
+h1,h2,h3{
+font-family:Gloock,serif;
+font-weight:400;
+}
+
+.hero h1{
+font-size:clamp(3rem,7vw,6rem);
+line-height:1;
+margin-bottom:24px;
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:700px;
+}
+
+.button{
+display:inline-block;
+margin-top:32px;
+padding:16px 28px;
+background:#111;
+color:white;
+text-decoration:none;
+border-radius:14px;
+}
+
+.pcb-flow{
+border:1px solid var(--border);
+border-radius:24px;
+padding:40px;
+background:var(--card);
+}
+
+.flow-step{
+padding:12px 0;
+font-weight:500;
+}
+
+.section{
+max-width:1400px;
+margin:auto;
+padding:120px 80px;
+}
+
+.section h2{
+font-size:3rem;
+margin-bottom:24px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:24px;
+padding:32px;
+}
+
+.card h3{
+margin-bottom:12px;
+font-size:1.6rem;
+}
+
+.timeline{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.timeline span{
+padding:12px 18px;
+border:1px solid var(--border);
+border-radius:999px;
+background:white;
+}
+
+.structure{
+background:#111;
+color:white;
+border-radius:30px;
+padding:40px;
+font-family:monospace;
+white-space:pre-line;
+}
+
+.footer{
+padding:80px;
+text-align:center;
+border-top:1px solid var(--border);
+margin-top:80px;
+}
+
+@media(max-width:900px){
+.hero{padding:40px}
+.section{padding:80px 30px}
+.hero-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-grid">
+
+<div>
+
+<p style="letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px;">
+Guía de referencia
+</p>
+
+<h1>
+Documentación de proyectos electrónicos
+</h1>
+
+<p>
+Una guía práctica para documentar PCBs desde la definición del problema hasta la publicación de un repositorio técnico. Incluye ejemplos, plantillas, checklists y buenas prácticas para producir documentación clara, reproducible y profesional.
+</p>
+
+<a class="button" href="documentation/introduccion.html">
+Comenzar lectura
+</a>
+
+</div>
+
+<div class="pcb-flow">
+
+<h3 style="margin-bottom:20px;">Ruta de documentación</h3>
+
+<div class="flow-step">Problema</div>
+<div class="flow-step">↓ Requisitos</div>
+<div class="flow-step">↓ Arquitectura</div>
+<div class="flow-step">↓ Componentes</div>
+<div class="flow-step">↓ Cálculos</div>
+<div class="flow-step">↓ Simulaciones</div>
+<div class="flow-step">↓ BOM</div>
+<div class="flow-step">↓ Gerbers</div>
+<div class="flow-step">↓ Ensamblaje</div>
+<div class="flow-step">↓ Plan de pruebas</div>
+<div class="flow-step">↓ Resultados</div>
+<div class="flow-step">↓ README</div>
+<div class="flow-step">↓ GitHub</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>¿Qué encontrarás aquí?</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Diseño</h3>
+<p>Problema, requisitos, arquitectura, componentes, cálculos y simulaciones.</p>
+</div>
+
+<div class="card">
+<h3>Documentación</h3>
+<p>BOM, Gerbers, ensamblaje, resultados, README y publicación.</p>
+</div>
+
+<div class="card">
+<h3>Herramientas</h3>
+<p>Constructores interactivos, plantillas, auditorías y ejemplos reales.</p>
+</div>
+
+<div class="card">
+<h3>Objetivo</h3>
+<p>Crear proyectos que otras personas puedan entender, fabricar y mantener.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Principios de la guía</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Claridad</h3>
+<p>La documentación debe poder entenderse sin hablar con el autor.</p>
+</div>
+
+<div class="card">
+<h3>Reproducibilidad</h3>
+<p>Otra persona debería poder recrear el proyecto.</p>
+</div>
+
+<div class="card">
+<h3>Justificación</h3>
+<p>Las decisiones técnicas deben explicarse, no solo mostrarse.</p>
+</div>
+
+<div class="card">
+<h3>Mantenimiento</h3>
+<p>La documentación debe seguir siendo útil meses o años después.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Estructura recomendada</h2>
+
+<div class="structure">
+docs/
+hardware/
+firmware/
+fabrication/
+simulations/
+images/
+README.md
+LICENSE
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Flujo completo</h2>
+
+<div class="timeline">
+<span>Problema</span>
+<span>Requisitos</span>
+<span>Arquitectura</span>
+<span>Componentes</span>
+<span>Cálculos</span>
+<span>Simulaciones</span>
+<span>BOM</span>
+<span>Gerbers</span>
+<span>Pruebas</span>
+<span>Resultados</span>
+<span>README</span>
+<span>GitHub</span>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Antes de empezar</h2>
+
+<p style="max-width:900px;font-size:1.1rem;">
+No es necesario completar los módulos en orden. La guía puede utilizarse como referencia durante cualquier etapa del desarrollo de una PCB. Cada módulo es independiente y puede consultarse según las necesidades del proyecto.
+</p>
+
+<a class="button" href="documentation/introduccion.html">
+Ir al índice
+</a>
+
+</section>
+
+<footer class="footer">
+<h3>Documentar una PCB</h3>
+<p>Guía abierta para estudiantes, investigadores y profesionales.</p>
+</footer>
+
+</body>
+</html>
