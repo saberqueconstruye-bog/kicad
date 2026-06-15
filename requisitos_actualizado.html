@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Requisitos | Documentar una PCB</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="app-layout">
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="../introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+<main class="content">
+<div class="course-progress"><div class="course-progress-fill" style="width:10%"></div></div>
+<p class="course-progress-text">Módulo 2 de 20</p>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 1
+</div>
+
+<h2>
+¿Qué es un requisito?
+</h2>
+
+<p>
+Un requisito describe una capacidad, comportamiento o restricción que el sistema debe cumplir.
+Los requisitos no hablan de componentes específicos.
+Hablan de resultados esperados.
+</p>
+
+<div class="grid-2">
+
+<div class="card bad">
+
+<h3>No es un requisito</h3>
+
+<p>
+Voy a usar un ESP32.
+</p>
+
+</div>
+
+<div class="card good">
+
+<h3>Sí es un requisito</h3>
+
+<p>
+El sistema deberá transmitir datos mediante WiFi.
+</p>
+
+</div>
+
+</div>
+
+<div class="question">
+
+<p>
+Selecciona cuál de las siguientes frases es realmente un requisito:
+</p>
+
+<label class="option">
+<input type="radio" name="req1">
+Diseñar una PCB con STM32
+</label>
+
+<label class="option">
+<input type="radio" name="req1">
+Usar un sensor BME280
+</label>
+
+<label class="option">
+<input type="radio" name="req1" data-correct="true">
+El sistema deberá medir temperatura
+</label>
+
+<div id="feedback-req1"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 2
+</div>
+
+<h2>
+Requisitos funcionales
+</h2>
+
+<p>
+Los requisitos funcionales describen lo que el sistema debe hacer.
+</p>
+
+<div class="card">
+
+<ul>
+
+<li>Medir temperatura.</li>
+
+<li>Registrar datos.</li>
+
+<li>Transmitir información.</li>
+
+<li>Mostrar alertas.</li>
+
+</ul>
+
+</div>
+
+<div class="grid-2">
+
+<div class="card bad">
+
+<h3>Malo</h3>
+
+<p>
+Sistema inteligente.
+</p>
+
+</div>
+
+<div class="card good">
+
+<h3>Bueno</h3>
+
+<p>
+El sistema deberá registrar una medición cada minuto.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 3
+</div>
+
+<h2>
+Requisitos no funcionales
+</h2>
+
+<p>
+Describen restricciones y condiciones de operación.
+</p>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Ejemplos</h3>
+
+<ul>
+<li>Consumo máximo 500mA</li>
+<li>Alimentación 24V</li>
+<li>Temperatura 0-60°C</li>
+<li>Costo máximo USD 30</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Pregunta</h3>
+
+<p>
+¿Una alimentación de 24V es funcional o no funcional?
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 4
+</div>
+
+<h2>
+Cómo redactarlos
+</h2>
+
+<p>
+La estructura recomendada es:
+</p>
+
+<div class="card">
+
+<p>
+El sistema deberá...
+</p>
+
+</div>
+
+<div class="grid-2">
+
+<div class="card bad">
+
+<h3>Malo</h3>
+
+<p>
+Sistema rápido.
+</p>
+
+</div>
+
+<div class="card good">
+
+<h3>Bueno</h3>
+
+<p>
+El sistema deberá responder en menos de 100 ms.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 5
+</div>
+
+<h2>
+Características de un buen requisito
+</h2>
+
+<table>
+
+<tr>
+<th>Característica</th>
+<th>Descripción</th>
+</tr>
+
+<tr>
+<td>Específico</td>
+<td>No ambiguo</td>
+</tr>
+
+<tr>
+<td>Medible</td>
+<td>Puede cuantificarse</td>
+</tr>
+
+<tr>
+<td>Verificable</td>
+<td>Puede probarse</td>
+</tr>
+
+<tr>
+<td>Necesario</td>
+<td>Aporta valor</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 6
+</div>
+
+<h2>
+Trazabilidad
+</h2>
+
+<p>
+Todo requisito debería poder relacionarse con una prueba.
+</p>
+
+<div class="card">
+
+<pre>
+
+REQ-01
+Medir temperatura
+
+↓
+
+TEST-01
+Validar medición
+
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 7
+</div>
+
+<h2>
+Tabla de requisitos
+</h2>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Validación</th>
+</tr>
+
+<tr>
+<td>RF-01</td>
+<td>Medir temperatura</td>
+<td>Funcional</td>
+<td>Prueba</td>
+</tr>
+
+<tr>
+<td>RNF-01</td>
+<td>24V</td>
+<td>No funcional</td>
+<td>Inspección</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 8
+</div>
+
+<h2>
+Cómo documentarlos
+</h2>
+
+<div class="card">
+
+<pre>
+
+## Requisitos funcionales
+
+RF-01
+El sistema deberá medir temperatura.
+
+RF-02
+El sistema deberá registrar datos.
+
+## Requisitos no funcionales
+
+RNF-01
+El sistema deberá operar con 24V.
+
+</pre>
+
+</div>
+
+</div>
+
+</section>
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 9
+</div>
+
+<h2>
+Constructor de requisitos
+</h2>
+
+<div class="question">
+
+<p>ID</p>
+<input id="req-id">
+
+<p>Descripción</p>
+<input id="req-desc">
+
+<p>Tipo</p>
+<select id="req-type">
+<option>Funcional</option>
+<option>No funcional</option>
+</select>
+
+<p>Método de validación</p>
+<input id="req-val">
+
+<button onclick="addRequirement()">
+Agregar requisito
+</button>
+
+</div>
+
+<table id="requirements-table">
+
+<tr>
+<th>ID</th>
+<th>Descripción</th>
+<th>Tipo</th>
+<th>Validación</th>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 10
+</div>
+
+<h2>
+Auditoría
+</h2>
+
+<div class="checklist">
+
+<div class="audit-item"><label><input type="checkbox" class="audit">
+Todos los requisitos son medibles
+</label>
+
+<div class="audit-item"><label><input type="checkbox" class="audit">
+Todos tienen método de validación
+</label>
+
+<div class="audit-item"><label><input type="checkbox" class="audit">
+No existen requisitos ambiguos
+</label>
+
+<div class="audit-item"><label><input type="checkbox" class="audit">
+Los requisitos funcionales están separados
+</label></div>
+
+</div>
+
+<div class="result">
+
+<h3 id="audit-score">
+0%
+</h3>
+
+<p>
+Preparación para diseño.
+</p>
+
+</div>
+
+<div class="page-navigation">
+
+<a
+href="problema.html"
+class="nav-button secondary">
+
+← Definición del problema
+
+</a>
+
+<a
+href="arquitectura.html"
+class="nav-button">
+
+Arquitectura →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function addRequirement(){
+
+const table =
+document.getElementById(
+"requirements-table"
+);
+
+const row =
+table.insertRow();
+
+row.insertCell().innerText =
+document.getElementById("req-id").value;
+
+row.insertCell().innerText =
+document.getElementById("req-desc").value;
+
+row.insertCell().innerText =
+document.getElementById("req-type").value;
+
+row.insertCell().innerText =
+document.getElementById("req-val").value;
+
+}
+
+const audit =
+document.querySelectorAll(".audit");
+
+function updateAudit(){
+
+const total = audit.length;
+
+const checked =
+[...audit]
+.filter(x=>x.checked)
+.length;
+
+const score =
+Math.round(
+checked/total*100
+);
+
+document
+.getElementById(
+"audit-score"
+)
+.innerText =
+score + "%";
+
+}
+
+audit.forEach(a=>{
+
+a.addEventListener(
+"change",
+updateAudit
+);
+
+});
+
+</script>
+</main></div></body></html>

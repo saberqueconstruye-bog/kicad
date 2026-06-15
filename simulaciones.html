@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulaciones | Documentar una PCB</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="../introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+<main class="content">
+
+<div class="course-progress">
+<div class="course-progress-fill" style="width:42%;"></div>
+</div>
+
+<p class="course-progress-text">
+6 de 14 módulos de documentación
+</p>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 1
+</div>
+
+<h2>
+¿Por qué documentar simulaciones?
+</h2>
+
+<p>
+Las simulaciones son evidencia técnica. Una simulación bien documentada permite justificar decisiones de diseño antes de fabricar una PCB y reduce iteraciones costosas.
+</p>
+
+<div class="grid-2">
+
+<div class="card bad">
+
+<h3>Malo</h3>
+
+<p>
+Simulado en LTSpice.<br>
+Funcionó.
+</p>
+
+</div>
+
+<div class="card good">
+
+<h3>Bueno</h3>
+
+<p>
+Objetivo: verificar estabilidad del regulador.<br>
+Software: LTSpice XVII.<br>
+Resultado: ripple máximo de 18mV.<br>
+Conclusión: cumple el requisito de 50mV.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 2
+</div>
+
+<h2>
+¿Qué simulaciones vale la pena documentar?
+</h2>
+
+<table>
+
+<tr>
+<th>Simulación</th>
+<th>¿Documentar?</th>
+<th>Motivo</th>
+</tr>
+
+<tr>
+<td>Reguladores</td>
+<td>Sí</td>
+<td>Validan estabilidad y ripple.</td>
+</tr>
+
+<tr>
+<td>Amplificadores</td>
+<td>Sí</td>
+<td>Justifican ganancia y respuesta.</td>
+</tr>
+
+<tr>
+<td>Filtros</td>
+<td>Sí</td>
+<td>Permiten validar frecuencia de corte.</td>
+</tr>
+
+<tr>
+<td>Consumo</td>
+<td>Sí</td>
+<td>Impacta autonomía y potencia.</td>
+</tr>
+
+<tr>
+<td>Resistencia LED</td>
+<td>No siempre</td>
+<td>Puede justificarse con cálculo simple.</td>
+</tr>
+
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 3
+</div>
+
+<h2>
+Información mínima
+</h2>
+
+<p>
+Toda simulación debería permitir que otra persona pueda reproducirla.
+</p>
+
+<div class="card">
+
+<ul>
+<li>Objetivo</li>
+<li>Software utilizado</li>
+<li>Versión</li>
+<li>Circuito simulado</li>
+<li>Condiciones</li>
+<li>Resultados</li>
+<li>Conclusión</li>
+</ul>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 4
+</div>
+
+<h2>
+Condiciones de simulación
+</h2>
+
+<p>
+Los resultados dependen de las condiciones utilizadas.
+</p>
+
+<div class="card">
+
+<p>
+Vin = 12V<br>
+Carga = 500mA<br>
+Temperatura = 25°C<br>
+Modelo = LM2596
+</p>
+
+</div>
+
+<p>
+Sin esta información la simulación no puede reproducirse correctamente.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 5
+</div>
+
+<h2>
+Capturas útiles
+</h2>
+
+<div class="grid-2">
+
+<div class="card bad">
+
+<h3>No útil</h3>
+
+<p>
+Captura completa del software sin explicación.
+</p>
+
+</div>
+
+<div class="card good">
+
+<h3>Útil</h3>
+
+<p>
+Gráfica recortada con ejes visibles, unidades y leyenda.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 6
+</div>
+
+<h2>
+Interpretar resultados
+</h2>
+
+<p>
+No basta con pegar una gráfica. Debes explicar qué significa.
+</p>
+
+<table>
+
+<tr>
+<th>Resultado esperado</th>
+<th>Resultado observado</th>
+<th>Conclusión</th>
+</tr>
+
+<tr>
+<td>Ripple &lt; 50mV</td>
+<td>18mV</td>
+<td>Cumple</td>
+</tr>
+
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 7
+</div>
+
+<h2>
+Ejemplo completo
+</h2>
+
+<div class="card">
+
+<h3>Objetivo</h3>
+<p>Verificar el ripple de un regulador buck.</p>
+
+<h3>Software</h3>
+<p>LTSpice XVII.</p>
+
+<h3>Condiciones</h3>
+<p>Vin = 12V, carga = 500mA.</p>
+
+<h3>Resultado</h3>
+<p>Ripple máximo = 18mV.</p>
+
+<h3>Conclusión</h3>
+<p>El diseño cumple las especificaciones.</p>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 8
+</div>
+
+<h2>
+Markdown profesional
+</h2>
+
+<div class="card">
+
+<pre>
+## Simulación de regulador
+
+### Objetivo
+Verificar ripple.
+
+### Software
+LTSpice XVII
+
+### Condiciones
+Vin = 12V
+Carga = 500mA
+
+### Resultado
+18mV
+
+### Conclusión
+Cumple.
+</pre>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 9
+</div>
+
+<h2>
+Constructor de simulaciones
+</h2>
+
+<div class="question">
+
+<p>Título</p>
+<input id="titulo">
+
+<p>Objetivo</p>
+<input id="objetivo">
+
+<p>Software</p>
+<input id="software">
+
+<p>Condiciones</p>
+<input id="condiciones">
+
+<p>Resultado</p>
+<input id="resultado">
+
+<p>Conclusión</p>
+<input id="conclusion">
+
+<button onclick="addSimulation()">
+Agregar simulación
+</button>
+
+</div>
+
+<div id="simulation-output"></div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 10
+</div>
+
+<h2>
+Auditoría
+</h2>
+
+<div class="checklist">
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene objetivo</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene software</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene condiciones</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene resultados</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene conclusión</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Puede reproducirse</label>
+</div>
+
+</div>
+
+<div class="result">
+
+<h3 id="audit-score">
+0%
+</h3>
+
+<p>
+Preparación para revisión técnica.
+</p>
+
+</div>
+
+<div class="page-navigation">
+
+<a href="calculos.html" class="nav-button secondary">
+← Cálculos
+</a>
+
+<a href="bom.html" class="nav-button">
+BOM →
+</a>
+
+</div>
+
+</div>
+</section>
+
+<script>
+
+function addSimulation(){
+
+const output =
+document.getElementById("simulation-output");
+
+output.innerHTML += `
+<div class="card">
+<h3>${document.getElementById("titulo").value}</h3>
+<p><strong>Objetivo:</strong> ${document.getElementById("objetivo").value}</p>
+<p><strong>Software:</strong> ${document.getElementById("software").value}</p>
+<p><strong>Condiciones:</strong> ${document.getElementById("condiciones").value}</p>
+<p><strong>Resultado:</strong> ${document.getElementById("resultado").value}</p>
+<p><strong>Conclusión:</strong> ${document.getElementById("conclusion").value}</p>
+</div>`;
+
+}
+
+const audit =
+document.querySelectorAll(".audit");
+
+function updateAudit(){
+
+const total = audit.length;
+
+const checked =
+[...audit].filter(x => x.checked).length;
+
+document.getElementById("audit-score").innerText =
+Math.round((checked/total)*100) + "%";
+
+}
+
+audit.forEach(a=>{
+a.addEventListener("change", updateAudit);
+});
+
+</script>
+
+</main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub y Documentación | Documentar una PCB</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+<main class="content">
+
+<div class="course-progress">
+<div class="course-progress-fill" style="width:85%;"></div>
+</div>
+
+<p class="course-progress-text">
+12 de 14 módulos de documentación
+</p>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 1
+</div>
+
+<h2>
+El repositorio no es para ti
+</h2>
+
+<p>
+Uno de los errores más comunes es asumir que la documentación existe porque tú ya entiendes el proyecto. La realidad es exactamente la contraria: la documentación existe para las personas que no estuvieron presentes durante el diseño.
+</p>
+
+<p>
+Tu README debe servir para que un profesor, compañero, reclutador, fabricante o incluso tu versión futura pueda comprender el proyecto rápidamente.
+</p>
+
+<div class="grid-2">
+
+<div class="card bad">
+
+<h3>Repositorio pobre</h3>
+
+<p>
+Proyecto Final<br>
+Versión 2<br>
+Última entrega
+</p>
+
+</div>
+
+<div class="card good">
+
+<h3>Repositorio útil</h3>
+
+<p>
+Monitor Ambiental IoT basado en ESP32 para monitorear temperatura, humedad y CO₂ en tiempo real.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 2
+</div>
+
+<h2>
+El README es la portada
+</h2>
+
+<p>
+Cuando una persona entra a tu repositorio, normalmente verá el README antes que cualquier otro archivo.
+</p>
+
+<p>
+Por eso debería responder inmediatamente:
+</p>
+
+<ul>
+<li>¿Qué es?</li>
+<li>¿Para qué sirve?</li>
+<li>¿Qué problema resuelve?</li>
+<li>¿Cómo se fabrica?</li>
+<li>¿Cómo se prueba?</li>
+</ul>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 3
+</div>
+
+<h2>
+Estructura ideal de carpetas
+</h2>
+
+<p>
+Un repositorio profesional está organizado por propósito y no por fechas o versiones improvisadas.
+</p>
+
+<div class="card">
+
+<pre>
+Repositorio/
+
+├── docs/
+├── hardware/
+├── firmware/
+├── fabrication/
+├── simulations/
+├── images/
+├── README.md
+└── LICENSE
+</pre>
+
+</div>
+
+<p>
+Cada carpeta tiene una responsabilidad específica. Esto facilita la navegación y el mantenimiento.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 4
+</div>
+
+<h2>
+Las imágenes son obligatorias
+</h2>
+
+<p>
+Los proyectos de hardware son visuales. Un repositorio sin imágenes obliga al lector a imaginar cómo luce el sistema.
+</p>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Imágenes recomendadas</h3>
+
+<ul>
+<li>Vista superior PCB</li>
+<li>Vista inferior PCB</li>
+<li>Vista 3D</li>
+<li>Diagrama de bloques</li>
+<li>Foto ensamblada</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Beneficio</h3>
+
+<p>
+Permiten entender el proyecto en menos de un minuto.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 5
+</div>
+
+<h2>
+Cómo escribir bien
+</h2>
+
+<p>
+La documentación debe explicar decisiones, no únicamente listar archivos.
+</p>
+
+<div class="grid-2">
+
+<div class="card bad">
+
+<h3>No aporta valor</h3>
+
+<p>
+Este archivo contiene el esquemático.
+</p>
+
+</div>
+
+<div class="card good">
+
+<h3>Aporta contexto</h3>
+
+<p>
+El sistema utiliza un ESP32 para transmitir mediciones mediante WiFi hacia un servidor remoto.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 6
+</div>
+
+<h2>
+Markdown profesional
+</h2>
+
+<p>
+GitHub utiliza Markdown para la mayoría de la documentación.
+</p>
+
+<div class="card">
+
+<pre>
+# Título
+
+## Sección
+
+### Subsección
+
+- Elemento
+
+| Campo | Valor |
+
+```c
+codigo
+```
+</pre>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 7
+</div>
+
+<h2>
+Plantilla de README
+</h2>
+
+<div class="card">
+
+<pre>
+# Nombre del proyecto
+
+## Descripción
+
+## Diagrama de bloques
+
+## Hardware
+
+## BOM
+
+## Simulaciones
+
+## Fabricación
+
+## Ensamblaje
+
+## Resultados
+
+## Licencia
+</pre>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 8
+</div>
+
+<h2>
+Cómo hacer que se vea profesional
+</h2>
+
+<table>
+
+<tr>
+<th>Elemento</th>
+<th>Propósito</th>
+</tr>
+
+<tr>
+<td>Badges</td>
+<td>Mostrar tecnologías y estado.</td>
+</tr>
+
+<tr>
+<td>Imágenes</td>
+<td>Explicar visualmente.</td>
+</tr>
+
+<tr>
+<td>Tabla de contenidos</td>
+<td>Facilitar navegación.</td>
+</tr>
+
+<tr>
+<td>Secciones colapsables</td>
+<td>Reducir ruido visual.</td>
+</tr>
+
+<tr>
+<td>GIFs</td>
+<td>Mostrar funcionamiento.</td>
+</tr>
+
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 9
+</div>
+
+<h2>
+Constructor de README
+</h2>
+
+<div class="question">
+
+<p>Nombre del proyecto</p>
+<input id="project-name">
+
+<p>Descripción</p>
+<input id="project-description">
+
+<p>Microcontrolador</p>
+<input id="project-mcu">
+
+<p>Sensores</p>
+<input id="project-sensors">
+
+<p>Licencia</p>
+<input id="project-license">
+
+<button onclick="generateReadme()">
+Generar README
+</button>
+
+</div>
+
+<div id="readme-output"></div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="lesson-tag">
+Lección 10
+</div>
+
+<h2>
+Auditoría
+</h2>
+
+<div class="checklist">
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene README</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene imágenes</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene BOM</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene simulaciones</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene instrucciones</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Tiene licencia</label>
+</div>
+
+<div class="audit-item">
+<label><input type="checkbox" class="audit"> Puede entenderse en 5 minutos</label>
+</div>
+
+</div>
+
+<div class="result">
+
+<h3 id="audit-score">
+0%
+</h3>
+
+<p>
+Preparación para publicación.
+</p>
+
+</div>
+
+<div class="page-navigation">
+
+<a href="readme.html" class="nav-button secondary">
+← README
+</a>
+
+<a href="publicacion.html" class="nav-button">
+Publicación →
+</a>
+
+</div>
+
+</div>
+</section>
+
+<script>
+
+function generateReadme(){
+
+const output =
+document.getElementById("readme-output");
+
+output.innerHTML = `
+<div class="card">
+<pre>
+# ${document.getElementById("project-name").value}
+
+## Descripción
+
+${document.getElementById("project-description").value}
+
+## Hardware
+
+Microcontrolador:
+${document.getElementById("project-mcu").value}
+
+Sensores:
+${document.getElementById("project-sensors").value}
+
+## Licencia
+
+${document.getElementById("project-license").value}
+</pre>
+</div>
+`;
+
+}
+
+const audit =
+document.querySelectorAll(".audit");
+
+function updateAudit(){
+
+const total =
+audit.length;
+
+const checked =
+[...audit].filter(x=>x.checked).length;
+
+document.getElementById(
+"audit-score"
+).innerText =
+Math.round(
+checked/total*100
+) + "%";
+
+}
+
+audit.forEach(a=>{
+a.addEventListener(
+"change",
+updateAudit
+);
+});
+
+</script>
+
+</main>
+
+</div>
+
+</body>
+</html>

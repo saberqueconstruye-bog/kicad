@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cálculos | Documentar una PCB</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+<main class="content">
+
+<div class="course-progress">
+<div class="course-progress-fill" style="width:55%"></div>
+</div>
+<p class="course-progress-text">Módulo 11 de 20</p>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 1</div>
+<h2>¿Por qué documentar cálculos?</h2>
+
+<p>Los cálculos son la justificación técnica de las decisiones de diseño. Una PCB no debería depender únicamente de intuición o experiencia. La documentación matemática permite demostrar por qué se seleccionó un componente, una topología o un valor específico.</p>
+
+<div class="grid-2">
+
+<div class="card bad">
+<h3>Malo</h3>
+<p>Se utilizó una resistencia de 220Ω.</p>
+</div>
+
+<div class="card good">
+<h3>Bueno</h3>
+<p>Se seleccionó una resistencia de 220Ω para limitar la corriente de un LED a aproximadamente 10mA usando una fuente de 5V.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 2</div>
+<h2>¿Qué cálculos deben documentarse?</h2>
+
+<p>No es necesario documentar todas las operaciones matemáticas. El objetivo es documentar aquellas que justifican decisiones importantes del diseño.</p>
+
+<table>
+<tr><th>Cálculo</th><th>¿Documentar?</th><th>Motivo</th></tr>
+<tr><td>Corriente LED</td><td>Sí</td><td>Justifica selección de resistencia.</td></tr>
+<tr><td>Regulador de voltaje</td><td>Sí</td><td>Define disipación y consumo.</td></tr>
+<tr><td>Ganancia de amplificador</td><td>Sí</td><td>Define comportamiento funcional.</td></tr>
+<tr><td>2 + 2</td><td>No</td><td>No aporta valor documental.</td></tr>
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 3</div>
+<h2>Estructura profesional</h2>
+
+<p>Todo cálculo debería seguir una estructura consistente.</p>
+
+<div class="card">
+<h3>Objetivo</h3>
+<p>Determinar la resistencia necesaria para un LED.</p>
+
+<h3>Fórmula</h3>
+<p>I = (Vcc − Vf) / R</p>
+
+<h3>Sustitución</h3>
+<p>I = (5 − 2.8) / 220</p>
+
+<h3>Resultado</h3>
+<p>10mA</p>
+
+<h3>Conclusión</h3>
+<p>La resistencia seleccionada cumple el requisito.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 4</div>
+<h2>Suposiciones</h2>
+
+<p>Todo cálculo depende de ciertas condiciones. Si estas condiciones no se documentan, el cálculo deja de ser reproducible.</p>
+
+<div class="card">
+<ul>
+<li>Voltaje de alimentación = 5V</li>
+<li>Caída directa del LED = 2.8V</li>
+<li>Temperatura ambiente = 25°C</li>
+<li>Tolerancia de componentes = ±1%</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 5</div>
+<h2>Uso correcto de unidades</h2>
+
+<p>Los resultados sin unidades no tienen significado ingenieril.</p>
+
+<div class="grid-2">
+
+<div class="card bad">
+<h3>Incorrecto</h3>
+<p>I = 0.01</p>
+</div>
+
+<div class="card good">
+<h3>Correcto</h3>
+<p>I = 10mA</p>
+</div>
+
+</div>
+
+<p>Siempre documenta unidades para voltaje, corriente, resistencia, potencia, frecuencia y cualquier otra magnitud física.</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 6</div>
+<h2>Tolerancias</h2>
+
+<p>Los componentes reales no son ideales. Las tolerancias afectan el comportamiento final del circuito.</p>
+
+<table>
+<tr><th>Nominal</th><th>Tolerancia</th><th>Rango real</th></tr>
+<tr><td>10kΩ</td><td>±1%</td><td>9.9kΩ - 10.1kΩ</td></tr>
+<tr><td>100Ω</td><td>±5%</td><td>95Ω - 105Ω</td></tr>
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 7</div>
+<h2>Ejemplo completo</h2>
+
+<div class="card">
+
+<h3>Objetivo</h3>
+<p>Determinar la corriente de un LED.</p>
+
+<h3>Fórmula</h3>
+<p>I = (Vcc − Vf) / R</p>
+
+<h3>Sustitución</h3>
+<p>I = (5V − 2.8V) / 220Ω</p>
+
+<h3>Resultado</h3>
+<p>I = 10mA</p>
+
+<h3>Conclusión</h3>
+<p>El LED operará dentro de condiciones seguras.</p>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 8</div>
+<h2>Cómo documentarlo en Markdown</h2>
+
+<div class="card">
+<pre>
+## Cálculo de corriente LED
+
+### Objetivo
+Determinar corriente.
+
+### Fórmula
+I=(Vcc−Vf)/R
+
+### Sustitución
+I=(5−2.8)/220
+
+### Resultado
+10mA
+
+### Conclusión
+Cumple requisitos.
+</pre>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 9</div>
+<h2>Constructor de cálculos</h2>
+
+<div class="question">
+
+<p>Título</p>
+<input id="titulo">
+
+<p>Objetivo</p>
+<input id="objetivo">
+
+<p>Fórmula</p>
+<input id="formula">
+
+<p>Resultado</p>
+<input id="resultado">
+
+<p>Conclusión</p>
+<input id="conclusion">
+
+<button onclick="addCalc()">Agregar cálculo</button>
+
+</div>
+
+<div id="calc-output"></div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 10</div>
+<h2>Auditoría</h2>
+
+<div class="checklist">
+
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos tienen objetivo</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos muestran fórmula</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos muestran sustitución</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos incluyen unidades</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos tienen conclusión</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos son reproducibles</label></div>
+
+</div>
+
+<div class="result">
+<h3 id="audit-score">0%</h3>
+<p>Preparación para revisión de ingeniería.</p>
+</div>
+
+</div>
+</section>
+
+<script>
+
+function addCalc(){
+
+const output=document.getElementById("calc-output");
+
+output.innerHTML += `
+<div class="card">
+<h3>${document.getElementById("titulo").value}</h3>
+<p><strong>Objetivo:</strong> ${document.getElementById("objetivo").value}</p>
+<p><strong>Fórmula:</strong> ${document.getElementById("formula").value}</p>
+<p><strong>Resultado:</strong> ${document.getElementById("resultado").value}</p>
+<p><strong>Conclusión:</strong> ${document.getElementById("conclusion").value}</p>
+</div>
+`;
+
+}
+
+const audit=document.querySelectorAll('.audit');
+
+function updateAudit(){
+
+const total=audit.length;
+
+const checked=[...audit].filter(x=>x.checked).length;
+
+document.getElementById('audit-score').innerText=
+Math.round((checked/total)*100)+'%';
+
+}
+
+audit.forEach(a=>a.addEventListener('change',updateAudit));
+
+</script>
+
+</main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOM | Documentar una PCB</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="../documentation/introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="../design/problema.html">
+			Problema
+		</a>
+
+		<a href="../design/requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="../design/arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="../design/esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="../design/componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="../documentation/bom.html">
+			BOM
+		</a>
+
+		<a href="../documentation/calculos.html">
+			Cálculos
+		</a>
+
+		<a href="../documentation/simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="../documentation/gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="../documentation/readme.html">
+			README
+		</a>
+
+		<a href="../documentation/github.html">
+			GitHub
+		</a>
+
+		<a href="../documentation/consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+<main class="content">
+
+<div class="course-progress">
+<div class="course-progress-fill" style="width:45%"></div>
+</div>
+<p class="course-progress-text">Módulo 9 de 20</p>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 1</div>
+<h2>¿Qué es una BOM?</h2>
+<p>Una BOM (Bill of Materials) es el documento que lista absolutamente todos los componentes necesarios para fabricar, ensamblar y mantener una PCB. Es uno de los documentos más importantes de cualquier proyecto porque conecta el diseño con la realidad física.</p>
+<p>Un esquemático indica cómo conectar componentes. Una BOM indica exactamente qué componentes comprar.</p>
+
+<div class="grid-2">
+<div class="card bad">
+<h3>Definición incompleta</h3>
+<p>Resistencia de 10kΩ</p>
+</div>
+
+<div class="card good">
+<h3>Definición profesional</h3>
+<p>R1<br>10kΩ ±1%<br>0603<br>Yageo<br>RC0603FR-0710KL</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 2</div>
+<h2>¿Por qué importa?</h2>
+<p>Muchos proyectos fallan porque el diseño fue terminado antes de verificar la disponibilidad de componentes. Una BOM bien construida reduce retrasos, facilita compras y evita sustituciones improvisadas.</p>
+<div class="card">
+<ul>
+<li>Permite comprar componentes correctamente.</li>
+<li>Facilita el ensamblaje.</li>
+<li>Reduce errores humanos.</li>
+<li>Permite mantenimiento futuro.</li>
+<li>Facilita fabricación en serie.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 3</div>
+<h2>Información mínima</h2>
+<p>Una BOM profesional debe contener información suficiente para que otra persona pueda reconstruir tu proyecto sin preguntarte nada.</p>
+<table>
+<tr><th>Campo</th><th>¿Por qué existe?</th></tr>
+<tr><td>Referencia</td><td>Ubicar la pieza en el esquemático.</td></tr>
+<tr><td>Valor</td><td>Identificar características eléctricas.</td></tr>
+<tr><td>Footprint</td><td>Garantizar compatibilidad mecánica.</td></tr>
+<tr><td>Cantidad</td><td>Determinar compras.</td></tr>
+<tr><td>Fabricante</td><td>Evitar ambigüedad.</td></tr>
+<tr><td>MPN</td><td>Identificar la pieza exacta.</td></tr>
+</table>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 4</div>
+<h2>Referencias</h2>
+<p>Las referencias son los identificadores únicos de cada componente dentro del diseño.</p>
+<div class="grid-2">
+<div class="card">
+<h3>Convenciones comunes</h3>
+<p>R = Resistencia<br>C = Capacitor<br>U = Circuito integrado<br>L = Inductor<br>D = Diodo</p>
+</div>
+<div class="card">
+<h3>Ejemplos</h3>
+<p>R1, R2, R3<br>C1, C2<br>U1<br>D1</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 5</div>
+<h2>Números de parte (MPN)</h2>
+<p>El MPN (Manufacturer Part Number) es la información más importante de toda la BOM. Dos componentes pueden tener exactamente el mismo valor eléctrico y aun así ser incompatibles.</p>
+
+<div class="grid-2">
+<div class="card bad">
+<h3>No suficiente</h3>
+<p>Capacitor 10uF</p>
+</div>
+
+<div class="card good">
+<h3>Correcto</h3>
+<p>CL10A106KP8NNNC</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 6</div>
+<h2>Distribuidores</h2>
+<p>La BOM puede incluir proveedores sugeridos, pero nunca debe depender de un enlace específico.</p>
+
+<table>
+<tr><th>Distribuidor</th><th>Ventaja</th></tr>
+<tr><td>Mouser</td><td>Amplio catálogo.</td></tr>
+<tr><td>DigiKey</td><td>Excelente documentación.</td></tr>
+<tr><td>LCSC</td><td>Integración con JLCPCB.</td></tr>
+<tr><td>Farnell</td><td>Mercado industrial.</td></tr>
+</table>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 7</div>
+<h2>Ejemplo de BOM profesional</h2>
+
+<table>
+<tr><th>Ref</th><th>Cantidad</th><th>Valor</th><th>MPN</th></tr>
+<tr><td>R1</td><td>2</td><td>10kΩ</td><td>RC0603FR-0710KL</td></tr>
+<tr><td>C1</td><td>1</td><td>10uF</td><td>CL10A106KP8NNNC</td></tr>
+<tr><td>U1</td><td>1</td><td>ESP32</td><td>ESP32-WROOM-32E</td></tr>
+</table>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 8</div>
+<h2>Cómo documentarla</h2>
+<div class="card">
+<pre>
+## BOM
+
+| Ref | Valor | Footprint | MPN |
+|-----|--------|-----------|------|
+| R1 | 10kΩ | 0603 | RC0603FR-0710KL |
+| C1 | 10uF | 0805 | CL10A106KP8NNNC |
+</pre>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 9</div>
+<h2>Constructor de BOM</h2>
+
+<div class="question">
+<p>Referencia</p>
+<input id="ref">
+<p>Valor</p>
+<input id="valor">
+<p>Footprint</p>
+<input id="footprint">
+<p>Cantidad</p>
+<input id="cantidad">
+<p>MPN</p>
+<input id="mpn">
+<button onclick="addBom()">Agregar componente</button>
+</div>
+
+<table id="bomTable">
+<tr><th>Ref</th><th>Valor</th><th>Footprint</th><th>Cantidad</th><th>MPN</th></tr>
+</table>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 10</div>
+<h2>Auditoría</h2>
+
+<div class="checklist">
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos tienen referencia</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos tienen footprint</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos tienen fabricante</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos tienen MPN</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos tienen cantidad</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Todos son comprables actualmente</label></div>
+</div>
+
+<div class="result">
+<h3 id="audit-score">0%</h3>
+<p>Preparación para fabricación.</p>
+</div>
+</div>
+</section>
+
+<script>
+function addBom(){
+const t=document.getElementById('bomTable');
+const r=t.insertRow();
+r.insertCell().innerText=document.getElementById('ref').value;
+r.insertCell().innerText=document.getElementById('valor').value;
+r.insertCell().innerText=document.getElementById('footprint').value;
+r.insertCell().innerText=document.getElementById('cantidad').value;
+r.insertCell().innerText=document.getElementById('mpn').value;
+}
+
+const audit=document.querySelectorAll('.audit');
+function updateAudit(){
+const total=audit.length;
+const checked=[...audit].filter(x=>x.checked).length;
+document.getElementById('audit-score').innerText=Math.round((checked/total)*100)+'%';
+}
+audit.forEach(a=>a.addEventListener('change',updateAudit));
+</script>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerbers | Documentar una PCB</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+<main class="content">
+
+<div class="course-progress">
+<div class="course-progress-fill" style="width:55%;"></div>
+</div>
+
+<p class="course-progress-text">8 de 14 módulos de documentación</p>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 1</div>
+<h2>¿Qué son los Gerbers?</h2>
+<p>Los archivos Gerber son el lenguaje que utilizan los fabricantes para construir una PCB. El fabricante no abre tu proyecto de KiCad, Altium o Eagle: abre los Gerbers.</p>
+<div class="grid-2">
+<div class="card bad">
+<h3>Error común</h3>
+<p>Enviar únicamente el archivo .kicad_pcb.</p>
+</div>
+<div class="card good">
+<h3>Correcto</h3>
+<p>Enviar Gerbers, taladros y documentación de fabricación.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 2</div>
+<h2>¿Por qué documentarlos?</h2>
+<p>La documentación de fabricación permite que cualquier persona genere nuevamente los archivos sin depender del autor original.</p>
+<ul>
+<li>Evita errores de producción.</li>
+<li>Permite auditorías.</li>
+<li>Facilita mantenimiento.</li>
+<li>Reduce retrabajos.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 3</div>
+<h2>Archivos mínimos</h2>
+
+<table>
+<tr><th>Archivo</th><th>Propósito</th></tr>
+<tr><td>Top Copper</td><td>Pistas capa superior.</td></tr>
+<tr><td>Bottom Copper</td><td>Pistas capa inferior.</td></tr>
+<tr><td>Top Silkscreen</td><td>Texto superior.</td></tr>
+<tr><td>Bottom Silkscreen</td><td>Texto inferior.</td></tr>
+<tr><td>Solder Mask</td><td>Aperturas de máscara.</td></tr>
+<tr><td>Drill File</td><td>Taladros.</td></tr>
+<tr><td>Board Outline</td><td>Contorno de la PCB.</td></tr>
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 4</div>
+<h2>Estructura de entrega</h2>
+
+<div class="card">
+<pre>
+Proyecto/
+│
+├── Gerbers.zip
+├── BOM.xlsx
+├── PickAndPlace.csv
+├── README.md
+└── Preview.png
+</pre>
+</div>
+
+<p>Una entrega profesional incluye más que los Gerbers.</p>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 5</div>
+<h2>Capturas obligatorias</h2>
+
+<p>Antes de publicar una PCB documenta visualmente:</p>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Vista superior</h3>
+<p>Componentes y serigrafía.</p>
+</div>
+
+<div class="card">
+<h3>Vista inferior</h3>
+<p>Ruteo y capas.</p>
+</div>
+
+<div class="card">
+<h3>Vista 3D</h3>
+<p>Verificación mecánica.</p>
+</div>
+
+<div class="card">
+<h3>Stackup</h3>
+<p>Estructura de capas.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 6</div>
+<h2>Cómo verificar los Gerbers</h2>
+
+<p>Nunca publiques archivos sin revisarlos en un visor independiente.</p>
+
+<table>
+<tr><th>Herramienta</th><th>Uso</th></tr>
+<tr><td>KiCad Gerber Viewer</td><td>Verificación local.</td></tr>
+<tr><td>JLCPCB Viewer</td><td>Vista previa de fabricación.</td></tr>
+<tr><td>Gerbv</td><td>Inspección avanzada.</td></tr>
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 7</div>
+<h2>Ejemplo profesional</h2>
+
+<div class="card">
+<h3>Objetivo</h3>
+<p>Fabricar una PCB de monitoreo ambiental.</p>
+
+<h3>Archivos generados</h3>
+<p>Gerbers RS-274X, Drill Excellon y Board Outline.</p>
+
+<h3>Verificación</h3>
+<p>Visualización en KiCad y JLCPCB.</p>
+
+<h3>Resultado</h3>
+<p>Fabricación exitosa sin errores.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 8</div>
+<h2>Cómo documentarlos en Markdown</h2>
+
+<div class="card">
+<pre>
+## Fabricación
+
+### Archivos incluidos
+
+- Gerbers.zip
+- Drill Files
+- BOM.xlsx
+
+### Verificación
+
+Visualizados en JLCPCB Viewer.
+</pre>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 9</div>
+<h2>Constructor de paquete de fabricación</h2>
+
+<div class="question">
+
+<p>Nombre del proyecto</p>
+<input id="proyecto">
+
+<p>Capas</p>
+<input id="capas">
+
+<p>Fabricante</p>
+<input id="fabricante">
+
+<p>Notas</p>
+<input id="notas">
+
+<button onclick="addPackage()">Generar ficha</button>
+
+</div>
+
+<div id="package-output"></div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 10</div>
+<h2>Auditoría</h2>
+
+<div class="checklist">
+<div class="audit-item"><label><input type="checkbox" class="audit"> Incluye Gerbers</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Incluye Drill Files</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Incluye Board Outline</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Incluye capturas</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Incluye README</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Fue verificado</label></div>
+</div>
+
+<div class="result">
+<h3 id="audit-score">0%</h3>
+<p>Preparación para fabricación.</p>
+</div>
+
+<div class="page-navigation">
+<a href="bom.html" class="nav-button secondary">← BOM</a>
+<a href="ensamblaje.html" class="nav-button">Ensamblaje →</a>
+</div>
+
+</div>
+</section>
+
+<script>
+function addPackage(){
+const output=document.getElementById("package-output");
+output.innerHTML += `<div class="card">
+<h3>${document.getElementById("proyecto").value}</h3>
+<p><strong>Capas:</strong> ${document.getElementById("capas").value}</p>
+<p><strong>Fabricante:</strong> ${document.getElementById("fabricante").value}</p>
+<p><strong>Notas:</strong> ${document.getElementById("notas").value}</p>
+</div>`;
+}
+
+const audit=document.querySelectorAll('.audit');
+function updateAudit(){
+const total=audit.length;
+const checked=[...audit].filter(x=>x.checked).length;
+document.getElementById('audit-score').innerText=Math.round((checked/total)*100)+'%';
+}
+audit.forEach(a=>a.addEventListener('change',updateAudit));
+</script>
+
+</main>
+</div>
+</body>
+</html>

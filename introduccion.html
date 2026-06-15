@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Introducción | Documentar una PCB</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="app-layout">
+
+   <aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+    <!-- CONTENIDO -->
+
+    <main class="content">
+
+        <div class="course-progress">
+            <div class="course-progress-fill" style="width:0%"></div>
+        </div>
+
+        <p class="course-progress-text">
+            Introducción a la guía
+        </p>
+
+        <!-- LECCIÓN 1 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 1
+                </div>
+
+                <h2>
+                    Bienvenido a la guía
+                </h2>
+
+                <p>
+                    Esta guía no enseña a diseñar PCBs.
+                    Enseña a documentarlas.
+                </p>
+
+                <p>
+                    Diseñar una PCB y documentarla son habilidades diferentes.
+                    Un proyecto puede funcionar perfectamente y aun así ser imposible de entender, reproducir o mantener.
+                </p>
+
+                <div class="card">
+
+                    <h3>
+                        Objetivo de esta guía
+                    </h3>
+
+                    <p>
+                        Transformar proyectos electrónicos en documentación clara, organizada, reproducible y profesional.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LECCIÓN 2 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 2
+                </div>
+
+                <h2>
+                    ¿Qué es documentación técnica?
+                </h2>
+
+                <p>
+                    La documentación técnica es el conjunto de información que permite entender, fabricar, validar y mantener un sistema.
+                </p>
+
+                <div class="grid-2">
+
+                    <div class="card bad">
+
+                        <h3>
+                            No es
+                        </h3>
+
+                        <ul>
+                            <li>Un informe.</li>
+                            <li>Una entrega.</li>
+                            <li>Un requisito académico.</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="card good">
+
+                        <h3>
+                            Sí es
+                        </h3>
+
+                        <p>
+                            La memoria del proyecto.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LECCIÓN 3 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 3
+                </div>
+
+                <h2>
+                    El problema de muchos proyectos
+                </h2>
+
+                <div class="grid-2">
+
+                    <div class="card bad">
+
+                        <h3>
+                            Situación común
+                        </h3>
+
+                        <ul>
+                            <li>Funciona.</li>
+                            <li>Nadie entiende cómo fue diseñado.</li>
+                            <li>No puede modificarse fácilmente.</li>
+                            <li>No puede fabricarse nuevamente.</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="card good">
+
+                        <h3>
+                            Situación ideal
+                        </h3>
+
+                        <ul>
+                            <li>Puede entenderse.</li>
+                            <li>Puede fabricarse.</li>
+                            <li>Puede probarse.</li>
+                            <li>Puede mejorarse.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LECCIÓN 4 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 4
+                </div>
+
+                <h2>
+                    ¿Qué significa reproducibilidad?
+                </h2>
+
+                <p>
+                    La documentación existe para que otra persona pueda repetir el trabajo realizado.
+                </p>
+
+                <div class="card">
+
+                    <h3>
+                        Pregunta clave
+                    </h3>
+
+                    <p>
+                        Si perdieras tu computador mañana,
+                        ¿podrías reconstruir completamente el proyecto?
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LECCIÓN 5 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 5
+                </div>
+
+                <h2>
+                    Qué cubre esta guía
+                </h2>
+
+                <div class="timeline-vertical">
+
+                    <div>Problema</div>
+                    <div>↓</div>
+
+                    <div>Requisitos</div>
+                    <div>↓</div>
+
+                    <div>Arquitectura</div>
+                    <div>↓</div>
+
+                    <div>Esquemático</div>
+                    <div>↓</div>
+
+                    <div>Componentes</div>
+                    <div>↓</div>
+
+                    <div>BOM</div>
+                    <div>↓</div>
+
+                    <div>Cálculos</div>
+                    <div>↓</div>
+
+                    <div>Simulaciones</div>
+                    <div>↓</div>
+
+                    <div>Gerbers</div>
+                    <div>↓</div>
+
+                    <div>README</div>
+                    <div>↓</div>
+
+                    <div>GitHub</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LECCIÓN 6 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 6
+                </div>
+
+                <h2>
+                    Diseño vs documentación
+                </h2>
+
+                <table>
+
+                    <tr>
+                        <th>Diseño</th>
+                        <th>Documentación</th>
+                    </tr>
+
+                    <tr>
+                        <td>Crear</td>
+                        <td>Explicar</td>
+                    </tr>
+
+                    <tr>
+                        <td>Decidir</td>
+                        <td>Justificar</td>
+                    </tr>
+
+                    <tr>
+                        <td>Construir</td>
+                        <td>Registrar</td>
+                    </tr>
+
+                    <tr>
+                        <td>Probar</td>
+                        <td>Evidenciar</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- LECCIÓN 7 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 7
+                </div>
+
+                <h2>
+                    Quién utilizará tu documentación
+                </h2>
+
+                <div class="grid-4">
+
+                    <div class="card">
+                        <h3>Tú</h3>
+                        <p>Dentro de unos meses.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Compañeros</h3>
+                        <p>Cuando continúen el proyecto.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Profesores</h3>
+                        <p>Cuando evalúen.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Fabricantes</h3>
+                        <p>Cuando construyan la PCB.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LECCIÓN 8 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 8
+                </div>
+
+                <h2>
+                    Qué hace buena a una documentación
+                </h2>
+
+                <div class="grid-2">
+
+                    <div class="card">
+                        <h3>Claridad</h3>
+                        <p>Se entiende.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Completitud</h3>
+                        <p>No faltan piezas.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Reproducibilidad</h3>
+                        <p>Puede repetirse.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Mantenimiento</h3>
+                        <p>Puede evolucionar.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LECCIÓN 9 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 9
+                </div>
+
+                <h2>
+                    Cómo utilizar esta guía
+                </h2>
+
+                <div class="card">
+
+                    <p>
+                        No es obligatorio seguir los módulos en orden.
+                    </p>
+
+                    <p>
+                        Cada sección puede utilizarse como material de referencia independiente.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LECCIÓN 10 -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="lesson-tag">
+                    Lección 10
+                </div>
+
+                <h2>
+                    Autoevaluación inicial
+                </h2>
+
+                <div class="checklist">
+
+                    <label>
+                        <input type="checkbox" class="audit">
+                        Tengo requisitos documentados
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="audit">
+                        Tengo arquitectura documentada
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="audit">
+                        Tengo esquemáticos organizados
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="audit">
+                        Tengo BOM
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="audit">
+                        Tengo README
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="audit">
+                        Tengo repositorio organizado
+                    </label>
+
+                </div>
+
+                <div class="result">
+
+                    <h3 id="audit-score">
+                        0%
+                    </h3>
+
+                    <p id="audit-message">
+                        Documentación mínima.
+                    </p>
+
+                </div>
+
+                <div class="page-navigation">
+
+                    <a
+                    href="../design/requisitos_actualizado.html"
+                    class="nav-button">
+
+                        Comenzar →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script>
+
+const audit =
+document.querySelectorAll(".audit");
+
+function updateAudit(){
+
+const total = audit.length;
+
+const checked =
+[...audit].filter(x => x.checked).length;
+
+const score =
+Math.round(
+checked / total * 100
+);
+
+document.getElementById(
+"audit-score"
+).innerText =
+score + "%";
+
+}
+
+audit.forEach(a => {
+
+a.addEventListener(
+"change",
+updateAudit
+);
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consejos Finales | Documentar una PCB</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+<main class="content">
+
+<div class="course-progress">
+<div class="course-progress-fill" style="width:100%;"></div>
+</div>
+
+<p class="course-progress-text">
+14 de 14 módulos de documentación
+</p>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 1</div>
+<h2>Diseña para humanos</h2>
+
+<p>
+Muchos estudiantes diseñan pensando únicamente en el circuito. Sin embargo, la documentación existe para personas: compañeros, profesores, fabricantes, reclutadores e incluso para ti dentro de algunos meses.
+</p>
+
+<div class="card">
+<p>
+Antes de cerrar cualquier proyecto pregúntate:
+</p>
+
+<p>
+<strong>¿Alguien podría entender este proyecto sin preguntarme nada?</strong>
+</p>
+
+<p>
+Si la respuesta es no, todavía falta documentación.
+</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 2</div>
+<h2>La claridad vence a la complejidad</h2>
+
+<div class="grid-2">
+
+<div class="card bad">
+<h3>Difícil de entender</h3>
+<p>
+20 bloques funcionales.<br>
+Nombres ambiguos.<br>
+Cruces innecesarios.
+</p>
+</div>
+
+<div class="card good">
+<h3>Fácil de entender</h3>
+<p>
+Alimentación.<br>
+Procesamiento.<br>
+Sensores.<br>
+Comunicación.
+</p>
+</div>
+
+</div>
+
+<p>
+Un diseño complejo no es automáticamente mejor. La claridad suele ser una señal mucho más fuerte de experiencia.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 3</div>
+<h2>Nombra todo correctamente</h2>
+
+<p>
+Los nombres son parte de la documentación.
+</p>
+
+<div class="grid-2">
+
+<div class="card bad">
+<h3>Malo</h3>
+<p>
+sensor_final<br>
+esp32_nuevo<br>
+voltaje1
+</p>
+</div>
+
+<div class="card good">
+<h3>Bueno</h3>
+<p>
+temperature_sensor<br>
+esp32_controller<br>
+battery_voltage
+</p>
+</div>
+
+</div>
+
+<p>
+Si un nombre necesita explicación, probablemente sea un mal nombre.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 4</div>
+<h2>No escondas decisiones</h2>
+
+<p>
+La documentación profesional no solo muestra qué se hizo. También explica por qué se hizo.
+</p>
+
+<div class="card">
+<p>
+Se seleccionó un ESP32 porque proporciona conectividad WiFi integrada y reduce el número de componentes externos necesarios.
+</p>
+</div>
+
+<p>
+Las decisiones justificadas son mucho más valiosas que una simple lista de componentes.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 5</div>
+<h2>Documenta mientras diseñas</h2>
+
+<p>
+Uno de los errores más comunes es dejar toda la documentación para el final.
+</p>
+
+<div class="card">
+<pre>
+Diseñar
+↓
+Documentar
+↓
+Diseñar
+↓
+Documentar
+</pre>
+</div>
+
+<p>
+Documentar durante el desarrollo reduce olvidos y mejora la calidad final.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 6</div>
+<h2>Usa imágenes siempre que puedas</h2>
+
+<p>
+Las imágenes suelen comunicar más información que varios párrafos de texto.
+</p>
+
+<table>
+<tr><th>Prioridad</th><th>Elemento</th></tr>
+<tr><td>1</td><td>Diagrama de bloques</td></tr>
+<tr><td>2</td><td>Vista PCB</td></tr>
+<tr><td>3</td><td>Fotografías</td></tr>
+<tr><td>4</td><td>Texto</td></tr>
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 7</div>
+<h2>Piensa en mantenimiento</h2>
+
+<p>
+La documentación no termina cuando la PCB funciona.
+</p>
+
+<div class="card">
+<ul>
+<li>¿Cómo modificarla?</li>
+<li>¿Cómo repararla?</li>
+<li>¿Cómo fabricar otra?</li>
+<li>¿Cómo actualizarla?</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 8</div>
+<h2>Piensa en reproducibilidad</h2>
+
+<p>
+La pregunta más importante de toda la documentación es:
+</p>
+
+<div class="card">
+<h3>
+¿Otra persona podría recrear este proyecto?
+</h3>
+</div>
+
+<p>
+Si la respuesta es sí, tu documentación está funcionando.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 9</div>
+<h2>Lo que más valoran los revisores</h2>
+
+<table>
+
+<tr>
+<th>Audiencia</th>
+<th>Lo que valora</th>
+</tr>
+
+<tr>
+<td>Profesores</td>
+<td>Requisitos claros y justificaciones.</td>
+</tr>
+
+<tr>
+<td>Empresas</td>
+<td>Organización y evidencia.</td>
+</tr>
+
+<tr>
+<td>Investigadores</td>
+<td>Reproducibilidad y metodología.</td>
+</tr>
+
+<tr>
+<td>Fabricantes</td>
+<td>Gerbers, BOM y ensamblaje.</td>
+</tr>
+
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 10</div>
+<h2>Auditoría final del proyecto</h2>
+
+<div class="checklist">
+
+<div class="audit-item"><label><input type="checkbox" class="audit"> El problema está claramente definido</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Los requisitos son medibles</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Existe una arquitectura documentada</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Los componentes están justificados</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Los cálculos son reproducibles</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Las simulaciones están documentadas</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Existe una BOM</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Los Gerbers están organizados</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Existe un plan de pruebas</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Los resultados están documentados</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Existe un README</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> El repositorio está organizado</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> El proyecto puede reproducirse</label></div>
+
+</div>
+
+<div class="result">
+
+<h3 id="audit-score">
+0%
+</h3>
+
+<p id="audit-message">
+Sin documentación.
+</p>
+
+</div>
+
+<div class="page-navigation">
+
+<a href="github.html" class="nav-button secondary">
+← GitHub
+</a>
+
+<a href="index.html" class="nav-button">
+Finalizar Curso
+</a>
+
+</div>
+
+</div>
+</section>
+
+<script>
+
+const audit =
+document.querySelectorAll(".audit");
+
+function updateAudit(){
+
+const total =
+audit.length;
+
+const checked =
+[...audit].filter(x=>x.checked).length;
+
+const score =
+Math.round((checked/total)*100);
+
+document.getElementById("audit-score").innerText =
+score + "%";
+
+let message = "";
+
+if(score < 25)
+message = "Sin documentación.";
+
+else if(score < 50)
+message = "Documentación básica.";
+
+else if(score < 75)
+message = "Proyecto entendible.";
+
+else if(score < 100)
+message = "Proyecto reproducible.";
+
+else
+message = "Proyecto profesional.";
+
+document.getElementById("audit-message").innerText =
+message;
+
+}
+
+audit.forEach(a=>{
+a.addEventListener("change", updateAudit);
+});
+
+</script>
+
+</main>
+
+</div>
+
+</body>
+</html>

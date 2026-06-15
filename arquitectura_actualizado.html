@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquitectura | Documentar una PCB</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<div class="app-layout">
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+<main class="content">
+<div class="course-progress"><div class="course-progress-fill" style="width:15%;"></div></div>
+<p class="course-progress-text">Módulo 3 de 20</p>
+<section>
+
+    <div class="container hero">
+
+        <div>
+
+            <div class="lesson-tag">
+                Página 3 de 20
+            </div>
+
+            <h1 class="hero-title">
+                Una PCB no es una colección de componentes.
+            </h1>
+
+            <p class="hero-subtitle">
+
+                Antes de seleccionar componentes debes entender cómo funciona el sistema.
+
+                La arquitectura describe funciones, interfaces y flujo de información.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <svg viewBox="0 0 700 250">
+
+                <rect x="30" y="70" width="150" height="80" fill="none" stroke="#111"/>
+
+                <text x="105" y="115" text-anchor="middle">
+                    Entrada
+                </text>
+
+                <line x1="180" y1="110" x2="270" y2="110" stroke="#111"/>
+
+                <rect x="270" y="70" width="150" height="80" fill="none" stroke="#111"/>
+
+                <text x="345" y="115" text-anchor="middle">
+                    Procesamiento
+                </text>
+
+                <line x1="420" y1="110" x2="510" y2="110" stroke="#111"/>
+
+                <rect x="510" y="70" width="150" height="80" fill="none" stroke="#111"/>
+
+                <text x="585" y="115" text-anchor="middle">
+                    Salida
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 1
+</div>
+
+<h2>
+¿Qué es arquitectura?
+</h2>
+
+<p>
+
+La arquitectura es la descripción de alto nivel del sistema.
+
+No describe resistencias.
+
+No describe pines.
+
+No describe componentes específicos.
+
+Describe funciones.
+
+</p>
+
+<div class="card">
+
+<p>
+
+La arquitectura responde una pregunta simple:
+
+<strong>¿Cómo trabaja el sistema?</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 2
+</div>
+
+<h2>
+Qué NO es arquitectura
+</h2>
+
+<div class="grid-2">
+
+<div class="card bad">
+
+<h3>Malo</h3>
+
+<p>
+
+ESP32
+
+<br><br>
+
+ADS1115
+
+<br><br>
+
+LM2596
+
+<br><br>
+
+OLED
+
+</p>
+
+</div>
+
+<div class="card good">
+
+<h3>Bueno</h3>
+
+<p>
+
+Adquisición
+
+<br><br>
+
+Procesamiento
+
+<br><br>
+
+Regulación
+
+<br><br>
+
+Visualización
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 3
+</div>
+
+<h2>
+Cómo dividir un sistema
+</h2>
+
+<p>
+
+Los sistemas complejos se entienden mejor cuando se dividen en funciones.
+
+</p>
+
+<div class="card">
+
+<ul>
+
+<li>Entrada de información</li>
+
+<li>Procesamiento</li>
+
+<li>Almacenamiento</li>
+
+<li>Comunicación</li>
+
+<li>Salida</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 4
+</div>
+
+<h2>
+Cómo nombrar bloques
+</h2>
+
+<table>
+
+<tr>
+<th>Malo</th>
+<th>Bueno</th>
+</tr>
+
+<tr>
+<td>ESP32</td>
+<td>Procesamiento</td>
+</tr>
+
+<tr>
+<td>BME280</td>
+<td>Sensado ambiental</td>
+</tr>
+
+<tr>
+<td>LM2596</td>
+<td>Regulación de potencia</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 5
+</div>
+
+<h2>
+Interfaces
+</h2>
+
+<p>
+
+Las interfaces definen cómo se comunican los bloques.
+
+</p>
+
+<table>
+
+<tr>
+<th>Interfaz</th>
+<th>Uso</th>
+</tr>
+
+<tr>
+<td>I2C</td>
+<td>Sensores</td>
+</tr>
+
+<tr>
+<td>SPI</td>
+<td>Alta velocidad</td>
+</tr>
+
+<tr>
+<td>UART</td>
+<td>Comunicación serial</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 6
+</div>
+
+<h2>
+Flujo de información
+</h2>
+
+<p>
+
+Una arquitectura debe explicar cómo se mueve la información.
+
+</p>
+
+<div class="card">
+
+<pre>
+
+Sensor
+
+↓
+
+MCU
+
+↓
+
+Base de datos
+
+↓
+
+Dashboard
+
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 7
+</div>
+
+<h2>
+Cómo documentar arquitectura
+</h2>
+
+<div class="card">
+
+<pre>
+
+## Arquitectura
+
+El sistema está compuesto por cuatro bloques:
+
+1. Sensado ambiental
+2. Procesamiento
+3. Comunicación
+4. Visualización
+
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 8
+</div>
+
+<h2>
+Ejemplo completo
+</h2>
+
+<div class="card">
+
+<p>
+
+Proyecto:
+Monitor de temperatura industrial
+
+</p>
+
+<ul>
+
+<li>Sensado</li>
+<li>Procesamiento</li>
+<li>Comunicación</li>
+<li>Alarma</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 9
+</div>
+
+<h2>
+Constructor de arquitectura
+</h2>
+
+<div class="question">
+
+<p>Bloque</p>
+
+<input id="block-name">
+
+<p>Función</p>
+
+<input id="block-function">
+
+<button onclick="addBlock()">
+
+Agregar bloque
+
+</button>
+
+</div>
+
+<table id="blocks-table">
+
+<tr>
+<th>Bloque</th>
+<th>Función</th>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 10
+</div>
+
+<h2>
+Auditoría
+</h2>
+
+<div class="checklist">
+
+<div class="audit-item"><label>
+<input type="checkbox" class="audit">
+Los bloques representan funciones
+</label></div>
+
+<div class="audit-item"><label>
+<input type="checkbox" class="audit">
+No se utilizan nombres de componentes
+</label></div>
+
+<div class="audit-item"><label>
+<input type="checkbox" class="audit">
+Las interfaces están definidas
+</label></div>
+
+<div class="audit-item"><label>
+<input type="checkbox" class="audit">
+El flujo de información es claro
+</label></div>
+
+</div>
+
+<div class="result">
+
+<h3 id="audit-score">
+0%
+</h3>
+
+<p>
+Preparación para selección de componentes.
+</p>
+
+</div>
+
+<div class="page-navigation">
+
+<a
+href="requisitos.html"
+class="nav-button secondary">
+
+← Requisitos
+
+</a>
+
+<a
+href="componentes.html"
+class="nav-button">
+
+Componentes →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function addBlock(){
+
+const table =
+document.getElementById("blocks-table");
+
+const row =
+table.insertRow();
+
+row.insertCell().innerText =
+document.getElementById("block-name").value;
+
+row.insertCell().innerText =
+document.getElementById("block-function").value;
+
+}
+
+const audit =
+document.querySelectorAll(".audit");
+
+function updateAudit(){
+
+const total = audit.length;
+
+const checked =
+[...audit].filter(x=>x.checked).length;
+
+document.getElementById(
+"audit-score"
+).innerText =
+Math.round(
+checked/total*100
+) + "%";
+
+}
+
+audit.forEach(a=>{
+
+a.addEventListener(
+"change",
+updateAudit
+);
+
+});
+
+</script>
+</main></div></body></html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esquemático | Documentar una PCB</title>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<div class="app-layout">
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+
+<main class="content">
+
+<div class="course-progress">
+<div class="course-progress-fill" style="width:28%"></div>
+</div>
+<p class="course-progress-text">Esquemático • 10 lecciones</p>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 1</div>
+<h2>¿Qué es un esquemático?</h2>
+
+<p>
+Un esquemático es una representación lógica del circuito. Su objetivo no es mostrar dónde están ubicados los componentes físicamente, sino explicar cómo se conectan entre sí.
+</p>
+
+<div class="grid-2">
+<div class="card bad">
+<h3>PCB</h3>
+<p>Muestra ubicación física, dimensiones y ruteo.</p>
+</div>
+
+<div class="card good">
+<h3>Esquemático</h3>
+<p>Muestra relaciones eléctricas, señales y funcionamiento.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 2</div>
+<h2>El esquemático es documentación</h2>
+
+<p>
+Un buen esquemático debería explicar el diseño por sí solo. Si alguien necesita una reunión para entender el circuito, la documentación probablemente puede mejorar.
+</p>
+
+<div class="card">
+<p><strong>Objetivo:</strong> que otra persona pueda comprender el sistema sin depender del diseñador original.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 3</div>
+<h2>Organización por bloques</h2>
+
+<div class="grid-2">
+
+<div class="card bad">
+<h3>Malo</h3>
+<p>Todos los componentes mezclados en una única hoja sin estructura.</p>
+</div>
+
+<div class="card good">
+<h3>Bueno</h3>
+<ul>
+<li>Alimentación</li>
+<li>Procesamiento</li>
+<li>Sensores</li>
+<li>Comunicación</li>
+</ul>
+</div>
+
+</div>
+
+<p>
+Separar bloques reduce el tiempo necesario para comprender el diseño.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 4</div>
+<h2>Nombres de señales</h2>
+
+<div class="grid-2">
+
+<div class="card bad">
+<h3>Evita</h3>
+<p>NET_001<br>NET_002<br>NET_003</p>
+</div>
+
+<div class="card good">
+<h3>Utiliza</h3>
+<p>USB_D+<br>BATTERY_VOLTAGE<br>TEMPERATURE_DATA</p>
+</div>
+
+</div>
+
+<p>
+Si una señal necesita explicación adicional para entenderse, probablemente está mal nombrada.
+</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 5</div>
+<h2>Etiquetas y comentarios</h2>
+
+<p>
+No documentes únicamente con símbolos. Agrega contexto donde sea necesario.
+</p>
+
+<table>
+<tr><th>Información</th><th>Ejemplo</th></tr>
+<tr><td>Voltaje</td><td>3.3V</td></tr>
+<tr><td>Frecuencia</td><td>16MHz</td></tr>
+<tr><td>Protocolo</td><td>I²C</td></tr>
+<tr><td>Comentario</td><td>UART 115200 bps</td></tr>
+</table>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 6</div>
+<h2>Convenciones visuales</h2>
+
+<p>
+Mantener una estructura consistente mejora la lectura del esquemático.
+</p>
+
+<div class="card">
+<ul>
+<li>Entradas a la izquierda.</li>
+<li>Salidas a la derecha.</li>
+<li>Alimentación en la parte superior.</li>
+<li>Tierra en la parte inferior.</li>
+<li>Flujo lógico de izquierda a derecha.</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 7</div>
+<h2>Ejemplo profesional</h2>
+
+<div class="card">
+<h3>ESP32 + BME280</h3>
+
+<p><strong>Objetivo:</strong> medir variables ambientales.</p>
+<p><strong>Interfaz:</strong> I²C.</p>
+<p><strong>Voltaje:</strong> 3.3V.</p>
+<p><strong>Bloques:</strong> Alimentación, ESP32, Sensor.</p>
+<p><strong>Señales críticas:</strong> SDA, SCL, EN.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 8</div>
+<h2>Cómo documentarlo</h2>
+
+<div class="card">
+<pre>
+## Esquemático
+
+### Herramienta
+KiCad 9
+
+### Hojas
+Power
+ESP32
+Sensors
+
+### Señales críticas
+I2C
+UART
+USB
+</pre>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 9</div>
+<h2>Constructor de bloques</h2>
+
+<div class="question">
+
+<p>Nombre del bloque</p>
+<input id="block-name">
+
+<p>Descripción</p>
+<input id="block-desc">
+
+<p>Entradas</p>
+<input id="block-in">
+
+<p>Salidas</p>
+<input id="block-out">
+
+<p>Notas</p>
+<input id="block-notes">
+
+<button onclick="addBlock()">
+Agregar bloque
+</button>
+
+</div>
+
+<div id="blocks-output"></div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="lesson-tag">Lección 10</div>
+<h2>Auditoría</h2>
+
+<div class="checklist">
+<div class="audit-item"><label><input type="checkbox" class="audit"> Bloques separados</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Señales nombradas</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Alimentación clara</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Comentarios incluidos</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Interfaces documentadas</label></div>
+<div class="audit-item"><label><input type="checkbox" class="audit"> Puede entenderse sin explicación</label></div>
+</div>
+
+<div class="result">
+<h3 id="audit-score">0%</h3>
+<p>Preparación para revisión técnica.</p>
+</div>
+
+<div class="page-navigation">
+<a href="arquitectura.html" class="nav-button secondary">← Arquitectura</a>
+<a href="componentes.html" class="nav-button">Componentes →</a>
+</div>
+
+</div>
+</section>
+
+<script>
+function addBlock(){
+const output=document.getElementById('blocks-output');
+output.innerHTML += `
+<div class="card">
+<h3>${document.getElementById('block-name').value}</h3>
+<p><strong>Descripción:</strong> ${document.getElementById('block-desc').value}</p>
+<p><strong>Entradas:</strong> ${document.getElementById('block-in').value}</p>
+<p><strong>Salidas:</strong> ${document.getElementById('block-out').value}</p>
+<p><strong>Notas:</strong> ${document.getElementById('block-notes').value}</p>
+</div>`;
+}
+
+const audit=document.querySelectorAll('.audit');
+function updateAudit(){
+const total=audit.length;
+const checked=[...audit].filter(x=>x.checked).length;
+document.getElementById('audit-score').innerText=Math.round((checked/total)*100)+'%';
+}
+audit.forEach(a=>a.addEventListener('change',updateAudit));
+</script>
+
+</main>
+</div>
+
+</body>
+</html>

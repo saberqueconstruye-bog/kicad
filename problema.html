@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Problema | Documentar una PCB</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+
+</head>
+
+<body>
+
+<div class="app-layout">
+
+<!-- ===================================================== -->
+<!-- SIDEBAR -->
+<!-- ===================================================== -->
+
+<aside class="sidebar">
+
+	<div class="sidebar-title">
+		Documentar una PCB
+	</div>
+
+	<a
+	href="../introduccion.html"
+	class="sidebar-home">
+
+		Introducción
+
+	</a>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DISEÑO
+		</div>
+
+		<a href="problema.html">
+			Problema
+		</a>
+
+		<a href="requisitos_actualizado.html">
+			Requisitos
+		</a>
+
+		<a href="arquitectura_actualizado.html">
+			Arquitectura
+		</a>
+
+		<a href="esquematico.html">
+			Esquemático
+		</a>
+
+		<a href="componentes_actualizado.html">
+			Componentes
+		</a>
+
+	</div>
+
+	<div class="sidebar-group">
+
+		<div class="sidebar-label">
+			DOCUMENTACIÓN
+		</div>
+
+		<a href="bom.html">
+			BOM
+		</a>
+
+		<a href="calculos.html">
+			Cálculos
+		</a>
+
+		<a href="simulaciones.html">
+			Simulaciones
+		</a>
+
+		<a href="gerbers.html">
+			Gerbers
+		</a>
+
+		<a href="readme.html">
+			README
+		</a>
+
+		<a href="github.html">
+			GitHub
+		</a>
+
+		<a href="consejos-finales.html">
+			Consejos finales
+		</a>
+
+	</div>
+
+</aside>
+
+<!-- ===================================================== -->
+<!-- CONTENT -->
+<!-- ===================================================== -->
+
+<main class="content">
+
+<div class="course-progress">
+<div class="course-progress-fill" style="width:20%;"></div>
+</div>
+
+<p class="course-progress-text">
+Problema • 10 lecciones
+</p>
+
+<!-- ===================================================== -->
+<!-- LECCION 1 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 1
+</div>
+
+<h2>
+¿Dónde encontrar problemas?
+</h2>
+
+<p>
+La mayoría de estudiantes comienzan un proyecto eligiendo un microcontrolador, un sensor o una herramienta de diseño.
+</p>
+
+<p>
+Sin embargo, los mejores proyectos comienzan mucho antes: identificando un problema real.
+</p>
+
+<p>
+Antes de abrir KiCad, elegir un ESP32 o diseñar una PCB, pregúntate:
+</p>
+
+<div class="card">
+
+<h3>
+Pregunta principal
+</h3>
+
+<p>
+¿Qué problema vale la pena resolver?
+</p>
+
+</div>
+
+<div class="card">
+
+<p>
+No empieces buscando componentes.
+</p>
+
+<p>
+Empieza buscando necesidades.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- LECCION 2 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 2
+</div>
+
+<h2>
+Problema vs solución
+</h2>
+
+<div class="grid-2">
+
+<div class="card bad">
+
+<h3>
+Esto NO es un problema
+</h3>
+
+<ul>
+
+<li>Voy a usar un ESP32.</li>
+
+<li>Voy a hacer una PCB.</li>
+
+<li>Voy a usar LoRa.</li>
+
+</ul>
+
+</div>
+
+<div class="card good">
+
+<h3>
+Esto sí es un problema
+</h3>
+
+<ul>
+
+<li>Necesito monitorear temperatura remotamente.</li>
+
+<li>Necesito reducir mediciones manuales.</li>
+
+<li>Necesito registrar datos automáticamente.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<p>
+Un problema describe una necesidad.
+</p>
+
+<p>
+Una solución describe cómo resolverla.
+</p>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- LECCION 3 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 3
+</div>
+
+<h2>
+Hackaday
+</h2>
+
+<p>
+Hackaday es una de las mejores fuentes para encontrar proyectos de hardware reales.
+</p>
+
+<div class="card">
+
+<h3>
+Qué observar
+</h3>
+
+<ul>
+
+<li>¿Qué problema intenta resolver?</li>
+
+<li>¿Quién necesita la solución?</li>
+
+<li>¿Qué limitaciones existían?</li>
+
+<li>¿Qué podría mejorarse?</li>
+
+</ul>
+
+</div>
+
+<p>
+No copies proyectos.
+Analiza los problemas que originaron esos proyectos.
+</p>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- LECCION 4 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 4
+</div>
+
+<h2>
+Hackster y Arduino Project Hub
+</h2>
+
+<p>
+Estas plataformas contienen miles de proyectos estudiantiles y de makers.
+</p>
+
+<table>
+
+<tr>
+<th>Plataforma</th>
+<th>Útil para</th>
+</tr>
+
+<tr>
+<td>Hackster</td>
+<td>IoT, sensores y automatización.</td>
+</tr>
+
+<tr>
+<td>Arduino Project Hub</td>
+<td>Ideas sencillas y proyectos iniciales.</td>
+</tr>
+
+</table>
+
+<div class="card">
+
+<h3>
+Ejercicio
+</h3>
+
+<p>
+Busca tres proyectos y escribe qué problema intentan resolver.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- LECCION 5 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 5
+</div>
+
+<h2>
+GitHub y Open Source Hardware
+</h2>
+
+<p>
+GitHub no es solamente una plataforma para almacenar código.
+</p>
+
+<p>
+También es una enorme biblioteca de proyectos electrónicos abiertos.
+</p>
+
+<div class="card">
+
+<h3>
+Búsquedas recomendadas
+</h3>
+
+<ul>
+
+<li>awesome hardware</li>
+
+<li>awesome embedded</li>
+
+<li>awesome electronics</li>
+
+<li>awesome robotics</li>
+
+<li>awesome iot</li>
+
+</ul>
+
+</div>
+
+<p>
+Busca oportunidades de mejora, nuevas funcionalidades o problemas no resueltos.
+</p>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- LECCION 6 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 6
+</div>
+
+<h2>
+Comunidades técnicas
+</h2>
+
+<p>
+Muchos problemas aparecen repetidamente en comunidades de ingeniería.
+</p>
+
+<table>
+
+<tr>
+<th>Comunidad</th>
+<th>Qué buscar</th>
+</tr>
+
+<tr>
+<td>r/arduino</td>
+<td>Problemas comunes.</td>
+</tr>
+
+<tr>
+<td>r/electronics</td>
+<td>Dudas de diseño.</td>
+</tr>
+
+<tr>
+<td>r/embedded</td>
+<td>Sistemas embebidos.</td>
+</tr>
+
+<tr>
+<td>Electronics Stack Exchange</td>
+<td>Preguntas técnicas reales.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- LECCION 7 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 7
+</div>
+
+<h2>
+Artículos científicos
+</h2>
+
+<p>
+Muchas oportunidades de innovación aparecen en investigaciones existentes.
+</p>
+
+<div class="grid-2">
+
+<div class="card good">
+
+<h3>
+Future Work
+</h3>
+
+<p>
+Describe futuras mejoras y nuevas líneas de investigación.
+</p>
+
+</div>
+
+<div class="card good">
+
+<h3>
+Limitations
+</h3>
+
+<p>
+Explica problemas que todavía no han sido resueltos.
+</p>
+
+</div>
+
+</div>
+
+<p>
+Estas dos secciones suelen ser una excelente fuente de ideas para estudiantes.
+</p>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- LECCION 8 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 8
+</div>
+
+<h2>
+Evaluar una idea
+</h2>
+
+<p>
+Antes de iniciar un proyecto, responde estas preguntas:
+</p>
+
+<div class="checklist">
+
+<label>
+<input type="checkbox">
+Resuelve un problema real.
+</label>
+
+<label>
+<input type="checkbox">
+Es viable para un estudiante.
+</label>
+
+<label>
+<input type="checkbox">
+Puede completarse en el tiempo disponible.
+</label>
+
+<label>
+<input type="checkbox">
+Puede documentarse completamente.
+</label>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- LECCION 9 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 9
+</div>
+
+<h2>
+Constructor de oportunidad
+</h2>
+
+<div class="question">
+
+<p>
+Sector
+</p>
+
+<input id="sector">
+
+<p>
+Usuario
+</p>
+
+<input id="user">
+
+<p>
+Problema observado
+</p>
+
+<input id="problem">
+
+<p>
+Frecuencia
+</p>
+
+<input id="frequency">
+
+<p>
+Impacto
+</p>
+
+<input id="impact">
+
+<button onclick="generateOpportunity()">
+
+Generar oportunidad
+
+</button>
+
+</div>
+
+<div id="opportunity-output"></div>
+
+</div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- LECCION 10 -->
+<!-- ===================================================== -->
+
+<section>
+
+<div class="container">
+
+<div class="lesson-tag">
+Lección 10
+</div>
+
+<h2>
+Auditoría
+</h2>
+
+<div class="checklist">
+
+<label>
+<input type="checkbox" class="audit">
+Existe un problema claramente definido
+</label>
+
+<label>
+<input type="checkbox" class="audit">
+Existe un usuario identificado
+</label>
+
+<label>
+<input type="checkbox" class="audit">
+La solución aún no fue definida
+</label>
+
+<label>
+<input type="checkbox" class="audit">
+El problema tiene impacto real
+</label>
+
+<label>
+<input type="checkbox" class="audit">
+La idea es viable para un estudiante
+</label>
+
+<label>
+<input type="checkbox" class="audit">
+Puede explicarse en menos de un minuto
+</label>
+
+</div>
+
+<div class="result">
+
+<h3 id="audit-score">
+0%
+</h3>
+
+<p>
+Preparación para definir requisitos.
+</p>
+
+</div>
+
+<div class="page-navigation">
+
+<a
+href="requisitos_actualizado.html"
+class="nav-button">
+
+Requisitos →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+<script>
+
+function generateOpportunity(){
+
+document.getElementById(
+"opportunity-output"
+).innerHTML = `
+
+<div class="card">
+
+<h3>
+Resumen
+</h3>
+
+<p>
+
+En el sector
+<strong>${document.getElementById("sector").value}</strong>,
+
+el usuario
+<strong>${document.getElementById("user").value}</strong>
+
+presenta el problema
+
+<strong>${document.getElementById("problem").value}</strong>.
+
+La situación ocurre con una frecuencia
+
+<strong>${document.getElementById("frequency").value}</strong>
+
+y tiene un impacto
+
+<strong>${document.getElementById("impact").value}</strong>.
+
+</p>
+
+</div>
+
+`;
+
+}
+
+const audit =
+document.querySelectorAll(".audit");
+
+function updateAudit(){
+
+const total =
+audit.length;
+
+const checked =
+[...audit]
+.filter(x=>x.checked)
+.length;
+
+const score =
+Math.round(
+checked/total*100
+);
+
+document
+.getElementById(
+"audit-score"
+).innerText =
+score + "%";
+
+}
+
+audit.forEach(a=>{
+
+a.addEventListener(
+"change",
+updateAudit
+);
+
+});
+
+</script>
+
+</body>
+</html>
